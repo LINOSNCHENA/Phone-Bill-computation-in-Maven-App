@@ -1,25 +1,27 @@
 package com.phonecompany.billing;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.math.BigDecimal;
 import java.util.*;
 
 @SpringBootApplication
 public class BillingApplication {
 
+        private static String currentFavourite;
 
-	public static void main(String[] args) {
-        System.out.println("Simple Calculator");
-        System.out.println();
-        TelephoneBillCalculator cal = new TelephoneBillCalculator();
-	        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter two numbers: ");
-        int a, b;
-        a = sc.nextInt();
-        b = sc.nextInt();
-        cal.add(a, b);
-        cal.mul(a, b);
-        cal.sub(a, b);
-        cal.div(a, b);
-        sc.close();
-}
+        public static void main(String[] args) {
+                System.out.println("\n ========================|PHONE-BILL CALCULATOR|===============================");
+                System.out.println();
+              
+                chargesCalculator currentMonthlyBill = new chargesCalculator();
+                ArrayList<String> phoneNumbers = new ArrayList<String>();
+                ArrayList<Long> phoneDurations = new ArrayList<Long>();
+                ArrayList<BigDecimal> phoneBillsOne = new ArrayList<BigDecimal>();
+
+                currentMonthlyBill.extractNumbers(phoneNumbers, phoneDurations);
+                currentMonthlyBill.extractFavourite(phoneNumbers, phoneDurations);
+                currentMonthlyBill.displayBills(phoneDurations, phoneBillsOne);
+                currentMonthlyBill.displayDiscounts(phoneBillsOne, phoneNumbers, currentFavourite);
+        }
 }

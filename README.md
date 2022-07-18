@@ -14,5 +14,12 @@ java -cp target/billing-BILLS.jar com.phonecompany.billing.BillingApplication
 
 billing-BILLS
 
+## Compile
+
+javac zed7.java
+java -cp . zed7 513.89 612.25
+
+javac MoneyCalculation.java
+java -cp . MoneyCalculation 513.89 612.25
 
 # End
