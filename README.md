@@ -27,12 +27,13 @@ filename TelephoneBillCalculator.java
 The following below interface would appear
 ```
 
+## 4- Interface U-Xperience
+ Below are screen shots from the application output
 
-# 4- UX
-```
-in progress
-```
-
+![ Muntu #1 ](https://github.com/LINOSNCHENA/Phone-Bill-computation-in-Maven-App/blob/main/LocalDB/page1.png)
+![ Muntu #2 ](https://github.com/LINOSNCHENA/Phone-Bill-computation-in-Maven-App/blob/main/LocalDB/page2.png)
+![ Muntu #3 ](https://github.com/LINOSNCHENA/Phone-Bill-computation-in-Maven-App/blob/main/LocalDB/page3.png)
+![ Muntu #4 ](https://github.com/LINOSNCHENA/Phone-Bill-computation-in-Maven-App/blob/main/LocalDB/page4.png)
 
 ## 5- Testing
 ```
