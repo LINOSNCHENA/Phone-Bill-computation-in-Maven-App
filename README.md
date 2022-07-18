@@ -1,25 +1,48 @@
 # Phone-Bill-computation-in-Maven-App
 
-mvn clean package
-mvn package
 
-java -cp simple-app-1.0.jar program.sample.controller.Application
-
-java -cp billing-0.0.1-SNAPSHOT.jar com.phonecompany.billing
-java -cp target/billing-0.0.1-SNAPSHOT.jar com.phonecompany.billing
-
-java -cp target/focusphone-1.0-SNAPSHOT.jar com.setUp
-java -cp target/billing-BILLS.jar com.setUp
-java -cp target/billing-BILLS.jar com.phonecompany.billing.BillingApplication
+## 1-Input data
+```
+Phone Logs are provided
+check input files in LocalDB
+cointains phobe book logs
+```
 
 billing-BILLS
 
-## Compile
+## 2-Compile
+```
+execute the following comman on the terminal
+mvn clean install
+mvn clean package
 
-javac zed7.java
-java -cp . zed7 513.89 612.25
 
-javac MoneyCalculation.java
-java -cp . MoneyCalculation 513.89 612.25
+```
+
+## 3-Compute
+```
+using VScode
+click run button
+filename TelephoneBillCalculator.java
+The following below interface would appear
+```
+
+
+# 4- UX
+```
+in progress
+```
+
+
+## 5- Testing
+```
+In progess
+```
+
+## 6- Pending
+```
+Time sensitive implementation
+In progress
+```
 
 # End

@@ -35,7 +35,7 @@ class chargesCalculator implements TelephoneBillsOneCalculator {
 	ArrayList<BigDecimal> phoneBillsTwo = new ArrayList<BigDecimal>();
 
 	public ArrayList<String> extractNumbers(ArrayList<String> phoneNumbers, ArrayList<Long> phoneDurations) { // 1
-		String fileName = "./LocalDB/DATA4.CSV";
+		String fileName = "./LocalDB/DATA1.CSV";
 		String line = "";
 		String input2, input3, input4;
 		long xSeconds;
@@ -62,15 +62,15 @@ class chargesCalculator implements TelephoneBillsOneCalculator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("\n" + "================|01|===================|Call_Durations|=====" + "\n");
-		System.out.println(phoneDurations);
+		System.out.println("\n======================|01|=======================|Call_Durations|=========\n");
+			System.out.println(phoneDurations);
 
 		return phoneNumbers;
 
 	}
 
 	public Object extractFavourite(ArrayList<String> list, ArrayList<Long> phoneDurations) { // 2
-		System.out.println("\n" + "================|02|===================|Favourite_Number|=====" + "\n");
+		System.out.println("\n======================|02|=====================|Favourite_Number|=========\n");
 
 		Map<String, Integer> hm = new HashMap<String, Integer>();
 		for (String i : list) {
@@ -128,7 +128,8 @@ class chargesCalculator implements TelephoneBillsOneCalculator {
 	public ArrayList<BigDecimal> displayDiscounts(ArrayList<BigDecimal> phoneBillsOne, ArrayList<String> phoneNumbers, // 4
 			String valx2) {
 		BigDecimal Billchage;
-		System.out.println("\n" + "================|03|===================|Final_Statistics|=====" + "\n");
+		System.out.println("\n======================|03|=====================|Final_Statistics|=========\n");
+		
 		for (int i = 0; i < phoneNumbers.size(); i++) {
 
 			String s = String.valueOf(phoneNumbers.get(i));
@@ -155,14 +156,14 @@ class chargesCalculator implements TelephoneBillsOneCalculator {
 		System.out.println("Phone_Numbers_all     = " + phoneNumbers);
 		System.out.println("Bills_NoFavourite_id  = " + phoneBillsOne);
 		System.out.println("Bill_Finalise_charged = " + phoneBillsTwo);
-		System.out.println("\n" + "================|04|===================|Results_Successful|=====" + "\n");
+		System.out.println("\n======================|04|===================|Results_Successful|=========\n");
 
 		return phoneBillsTwo;
 	}
 
 	// Driver
 	public static void main(String[] args) {
-		System.out.println("\n ========================|PHONE-BILL CALCULATOR|===============================");
+		System.out.println("\n=========================================|PHONE-BILL CALCULATOR|===========");	
 		System.out.println();
 
 		chargesCalculator currentMonthlyBill = new chargesCalculator();
